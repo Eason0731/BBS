@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0 auto; font-weight:normal; }
+.box{ width:1200px; height:1500px; font-weight: normal; font-size:14px; background:"../images/bg.jpg"}
+.header{ width:1200px; height:20px; background:#F2F2F2;}
+.banner{ width:1200px; height:50px;}
+.banner img{ float:left}
+.banner .login{ width:100px; float:right; background:#003333}
+.nav{ width:1200px; height:30px; background:#256ebd}
+.nav ul.nav, ul.nav ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	font:left;
+}
+.nav ul.nav li {
+	float: left;
+	width: 10em;
+	background-color: #256ebd;
+}
+.nav ul.nav li ul {
+	width: 8em;
+	position: absolute;
+	left: -999em;
+}
+.nav .nav li:hover ul {
+	left: auto;
+}
+.nav ul.nav a {
+	display: block; 
+	color:#FFFFFF;
+	text-decoration: none;
+	padding: 0.3em 1em;
+	border-right: 1px solid #486B02;
+	border-left: 1px solid #E4FFD3;
+}
+.nav ul.nav li li a {
+	border-bottom: 1px solid #486B02;
+	border-top: 1px solid #486B02;
+	border-right: 0;
+	border-left: 0;
+}
+.nav ul.nav li:last-child a {
+	border-right: 0;
+	border-bottom: 0;
+}
+ .navul a:hover, ul a:focus {
+	color: #E4FFD3;
+	background-color: #6DA203;
+}
+
+.main{ width:1200px; border-top:1px solid #000}
+.main .section1{ width:1200px; height:150px; }
+.main .section1 .section1_title{ width:1200px; height:30px; background:#ecf1f5}
+.main .section2{ width:1200px; height:150px; }
+.main .section2 .section2_title{ width:1200px; height:30px; background:#ecf1f5}
+.main .section3{ width:1200px; height:150px; }
+.main .section3 .section3_title{ width:1200px; height:30px; background:#ecf1f5}
+.main .section4{ width:1200px; height:150px; }
+.main .section4 .section4_title{ width:1200px; height:30px; background:#ecf1f5}
+.main .section5{ width:1200px; height:150px; }
+.main .section5 .section5_title{ width:1200px; height:30px; background:#ecf1f5}
+.main ul{ color:#3333CC}
+hr{ border:1px dashed #666666;}
+.links{ width:1200px; height:80px; background: #F4F4F4}
+.links ul{ float:left}
+.links li{ float:left;  width:100px; list-style:none;}
+.links a{ color:#FF9933; text-align:center; text-decoration:none;}
+.footer{ width:1200px; height:50px; background: #F0F0F0}
+.footer li{ color:#FF0000; text-align:center; font-weight:bold; list-style:none}

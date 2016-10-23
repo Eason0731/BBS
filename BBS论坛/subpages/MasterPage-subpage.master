@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage-subpage.master.cs" Inherits="subpages_MasterPage"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+
+</title>
+<link href="../style/css.css" rel="stylesheet" type="text/css" />
+		<script src="../kindeditor/kindeditor.js"></script>
+        <script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+	<script  src="../kindeditor/lang/zh_CN.js"></script>
+	<script   src="../kindeditor/plugins/code/prettify.js"></script>
+	<script>
+
+
+	    KindEditor.ready(function (K) {
+	    var editor1 = K.create('#textbox[name="ctl00$ContentPlaceHolder2$txt评论"]', {
+	            cssPath: '../kindeditor/plugins/code/prettify.css',
+	            uploadJson: 'upload_json.ashx',
+	            fileManagerJson: 'file_manager_json.ashx',
+	            allowFileManager: true,
+	            afterBlur: function () { this.sync(); },
+	            afterCreate: function () {
+	                var self = this;
+	                K.ctrl(document, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	                K.ctrl(self.edit.doc, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	            }
+	        });
+	        prettyPrint();
+	    });
+
+
+	    KindEditor.ready(function (K) {
+	        var editor2 = K.create('#textbox[name="ctl00$ContentPlaceHolder2$txt编辑内容"]', {
+	            cssPath: '../kindeditor/plugins/code/prettify.css',
+	            uploadJson: 'upload_json.ashx',
+	            fileManagerJson: 'file_manager_json.ashx',
+	            allowFileManager: true,
+	            afterBlur: function () { this.sync(); },
+	            afterCreate: function () {
+	                var self = this;
+	                K.ctrl(document, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	                K.ctrl(self.edit.doc, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	            }
+	        });
+	        prettyPrint();
+	    });
+
+
+	    KindEditor.ready(function (K) {
+	        var editor3 = K.create('#textbox[name="ctl00$ContentPlaceHolder2$txt内容"]', {
+	            cssPath: '../kindeditor/plugins/code/prettify.css',
+	            uploadJson: 'upload_json.ashx',
+	            fileManagerJson: 'file_manager_json.ashx',
+	            allowFileManager: true,
+	            afterBlur: function () { this.sync(); },
+	            afterCreate: function () {
+	                var self = this;
+	                K.ctrl(document, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	                K.ctrl(self.edit.doc, 13, function () {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	            }
+	        });
+	        prettyPrint();
+	    });
+	    
+
+
+           
+           </script>
+
+
+
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FF9933
+}
+
+.main { width:1200px;  }
+.main ul{ color: #333333; font-weight:bold; font-size:16px}
+.main .main_title{ width:1200px; background:#ecf1f5}
+
+-->
+</style>
+
+
+
+<SCRIPT language=javascript>
+<!--
+    //document.write("");
+
+    function show_date_time() {
+        window.setTimeout("show_date_time()", 1000);
+        var now = new Date(); //获取系统日期
+        //获取时间 
+        var hh = now.getHours(); //获取小时
+        var mm = now.getMinutes(); //获取分钟
+        var ss = now.getTime() % 60000; //获取时间，因为系统中时间是以毫秒计算的， 
+        //所以秒要通过余60000得到。 
+        ss = (ss - (ss % 1000)) / 1000; //然后，将得到的毫秒数再处理成秒 
+        span_dt_dt.innerHTML = hh + "时" + mm + "分" + ss + "秒" + now;
+    }
+    show_date_time();
+//-->
+</SCRIPT>
+
+</head>
+<body>
+    <form id="example" runat="server">
+<div class="box">
+  <div class="header">
+      <span id="span_dt_dt" style='border:1px solid black;background-color:#FFFFFF' ></span>
+    </div>
+  <div class="banner"> <img src="../images/logo.gif" />
+    <div align="right">  <asp:Label 
+            ID="lbl用户" runat="server"></asp:Label>
+        <asp:Label ID="lbl显示" runat="server"></asp:Label>
+        &nbsp;<asp:LinkButton ID="lb个人信息" runat="server" onclick="lb个人信息_Click">个人信息</asp:LinkButton>
+      &nbsp;<asp:LinkButton ID="lb注销" runat="server" onclick="lb注销_Click">注销</asp:LinkButton>
+      &nbsp;<asp:LinkButton ID="lb后台管理" runat="server" onclick="lb后台管理_Click">后台管理</asp:LinkButton>
+      <br />
+      <asp:Label ID="lbl用户分组" runat="server"></asp:Label>
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="积分："></asp:Label>
+        <asp:Label ID="lbl积分" runat="server"></asp:Label>
+</div>
+  </div>
+  <div class="nav" style="border:2px #256ebd solid;">
+    <ul class="nav">
+      <li><a href="../index.aspx">论坛首页</a></li>
+      <li><a href="#">板块浏览</a>
+        <ul>
+          <li><a href="forum_notice/Notice_Index.aspx">公告区</a></li>
+          <li><a href="forum_Football/Football_Index.aspx">绿茵场</a></li>
+          <li><a href="forum_Basketball/Basketball_Index.aspx">篮球场</a></li>
+          <li><a href="forum_Racing/Racing_Index.aspx">赛车场</a></li>
+          <li><a href="forum_chating/Chating_Index.aspx">灌水天地</a></li>
+        </ul>
+      </li>
+      <li><a href="Search.aspx">搜索帖子</a>  </li>
+      <li><a href="sports_event.aspx">体育项目介绍</a></li>
+      <li><a href="boards.aspx">申诉/留言</a></li>
+     
+       <li><a href="Sports_News.aspx">体育新闻</a></li>
+    </ul>
+  </div>
+  <div class="main" style="border:2px #000000 solid;">
+    <div class="main_title">
+       <div align="center"> <ul> <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder></ul></div>
+    </div>
+     
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+          
+      </asp:ContentPlaceHolder>
+      
+  </div>
+    
+  <div class="footer" style="border:2px #000000 solid;">
+    <div align="center">
+      <ul>
+        <li>Powered by Visual Studio</li>
+        <li>Copyright(C) 2014 Sports BBS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </form>
+</body>
+</html>

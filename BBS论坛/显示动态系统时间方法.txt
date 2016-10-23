@@ -1,0 +1,23 @@
+可使用JS
+
+前台控件：<span id="span_dt_dt" style='border:1px solid black;background-color:#FFFFFF' ></span>
+
+style中的代码：
+<SCRIPT language=javascript>
+<!--
+//document.write("");
+
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+var now = new Date(); //获取系统日期
+//获取时间 
+var hh = now.getHours(); //获取小时
+var mm = now.getMinutes(); //获取分钟
+var ss = now.getTime() % 60000; //获取时间，因为系统中时间是以毫秒计算的， 
+//所以秒要通过余60000得到。 
+ss = (ss - (ss % 1000)) / 1000; //然后，将得到的毫秒数再处理成秒 
+span_dt_dt.innerHTML=hh+"时"+mm+"分"+ss+"秒"+now; 
+}
+show_date_time();
+//-->
+</SCRIPT>

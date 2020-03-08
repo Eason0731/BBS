@@ -106,6 +106,8 @@
                     </tr>
                     <tr>
                     <td valign="top" height="80" class="style1">
+                        <asp:Label ID="lbl楼层" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Floor")%>'></asp:Label>楼
+                        <br />
                         发表时间:<br /><%#DataBinder.Eval(Container.DataItem, "time")%><br /><br /></td>
                     
                     <td>

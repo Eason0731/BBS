@@ -159,6 +159,17 @@ public partial class subpages_Show_Article : System.Web.UI.Page
         oda.Fill(ds);
         /*DataList评论区域，Comments评论表连接Users表显示用户头像*/
 
+        /*显示评论楼层*/
+        ds.Tables[0].Columns.Add("Floor");
+        int i = 1;
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            i++;
+            row["Floor"] = i.ToString();
+        }
+        /*显示评论楼层*/
+        
+
         PagedDataSource ps = new PagedDataSource();
         ps.DataSource = ds.Tables[0].DefaultView;
         ps.AllowPaging = true;
@@ -169,6 +180,7 @@ public partial class subpages_Show_Article : System.Web.UI.Page
         lbntUp.Enabled = true;
         lbtnDown.Enabled = true;
         lbtnLast.Enabled = true;
+        
         if (current_page == 1)
         {
             lbtnFirst.Enabled = false;
@@ -179,6 +191,7 @@ public partial class subpages_Show_Article : System.Web.UI.Page
             lbtnLast.Enabled = false;
             lbtnDown.Enabled = false;
         }
+
         DaraList评论.DataSource = ps;
         DaraList评论.DataBind();
     }

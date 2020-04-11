@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>论坛注册协议</title>
+    <link rel="icon" type="image/png" href="images\FO 2 years.ico"/>
 </head>
 <body>
     <form id="form1" runat="server">

@@ -1,24 +1,27 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BBS论坛", ".", "{8D0D04E8-D010-4921-9E1E-044C865598FA}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BBS-Mysql", ".", "{8D0D04E8-D010-4921-9E1E-044C865598FA}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/BBS论坛"
-		Debug.AspNetCompiler.PhysicalPath = "..\BBS论坛\"
+		Debug.AspNetCompiler.PhysicalPath = "..\BBS With MySQL\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\BBS论坛\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/BBS论坛"
-		Release.AspNetCompiler.PhysicalPath = "..\BBS论坛\"
+		Release.AspNetCompiler.PhysicalPath = "..\BBS With MySQL\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\BBS论坛\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "29257"
+		SlnRelativePath = "..\BBS With MySQL\"
 	EndProjectSection
 EndProject
 Global
@@ -31,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {989D60D1-1058-45DB-BDEB-401439088338}
 	EndGlobalSection
 EndGlobal
